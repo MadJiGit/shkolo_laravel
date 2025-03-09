@@ -1,0 +1,203 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+}
+
+/* Header */
+.header {
+    text-align: center;
+    font-size: 2em;
+    padding: 20px;
+    background-color: #007bff;
+    color: #fff;
+}
+
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 20px;
+}
+
+/* Button Cell */
+.button-cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100px;
+    width: 100%;
+    border: 2px solid black;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.button-cell:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Button Content */
+.button-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-title {
+    font-size: 2em;
+    color: #007bff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+/* Edit & Delete Buttons */
+.edit-button, .delete-button {
+    position: absolute;
+    bottom: 5px;
+    width: 30px;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    display: none;
+}
+
+.edit-button { left: 5px; }
+.delete-button { right: 5px; }
+
+.button-cell:hover .edit-button,
+.button-cell:hover .delete-button {
+    display: flex;
+}
+
+/* Form Configuration */
+.config-container {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Labels & Inputs */
+.config-container label {
+    display: block;
+    font-weight: bold;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.config-container input, .config-container select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+/* Buttons */
+.form-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background 0.3s ease-in-out;
+}
+
+.form-button:hover {
+    background-color: #0056b3;
+}
+
+/* Back Button */
+.back-button {
+    background-color: #007bff;
+}
+
+.back-button:hover {
+    background-color: #0056b3;
+}
+
+/* Plus Button Image */
+.empty-button-icon {
+    width: 50px;
+    height: 50px;
+    display: block;
+    margin: auto;
+}
+
+/* Custom Modal Styling */
+.modal {
+    z-index: 1000;
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    width: 300px;
+    margin: auto;
+}
+
+.confirm-btn {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.cancel-btn {
+    background-color: #6c757d;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
+}
